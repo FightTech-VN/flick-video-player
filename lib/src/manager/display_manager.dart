@@ -13,15 +13,11 @@ class FlickDisplayManager extends ChangeNotifier {
   bool _mounted = true;
   Timer? _showPlayerControlsTimer;
   Timer? _showVolumeLevelTimer;
-  bool _showPlayerControls = true;
+  bool _showPlayerControls = false;
   bool _showForwardSeek = false;
   bool _showBackwardSeek = false;
   bool _showVolumeLevel = false;
   double? volume;
-
-  void setShowPlayerControls(bool showPlayerControls) {
-    _showPlayerControls = showPlayerControls;
-  }
 
   /// Show player controls or not.
   bool get showPlayerControls => _showPlayerControls;
